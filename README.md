@@ -1,5 +1,6 @@
-moodle_plugin
+#moodle_plugin
 
+```text
 moodle/
 └── local/
     └── registrationplugin/
