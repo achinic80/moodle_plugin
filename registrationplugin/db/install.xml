@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XMLDB PATH="local/registrationplugin/db" VERSION="20250912" COMMENT="Install DB">
+    <TABLES>
+        <TABLE NAME="local_registrationtoken" COMMENT="Pending registration tokens">
+            <FIELDS>
+                <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
+                <FIELD NAME="email" TYPE="varchar" LENGTH="255" NOTNULL="true"/>
+                <FIELD NAME="firstname" TYPE="varchar" LENGTH="100" NOTNULL="true"/>
+                <FIELD NAME="lastname" TYPE="varchar" LENGTH="100" NOTNULL="true"/>
+                <FIELD NAME="country" TYPE="char" LENGTH="2" NOTNULL="false"/>
+                <FIELD NAME="mobile" TYPE="varchar" LENGTH="50" NOTNULL="false"/>
+                <FIELD NAME="token" TYPE="varchar" LENGTH="64" NOTNULL="true"/>
+                <FIELD NAME="created" TYPE="int" LENGTH="10" NOTNULL="true"/>
+                <FIELD NAME="expires" TYPE="int" LENGTH="10" NOTNULL="true"/>
+            </FIELDS>
+            <KEYS>
+                <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+                <KEY NAME="tokenidx" TYPE="unique" FIELDS="token"/>
+            </KEYS>
+        </TABLE>
+    </TABLES>
+</XMLDB>
